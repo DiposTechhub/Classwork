@@ -65,7 +65,7 @@ class Program
         // Display the sum of the numbers
         Console.WriteLine("The sum of all your wonderful numbers is: " + sum);
 
-        Console.WriteLine("---- End  of Program -----");
+        Console.WriteLine("---- End  of Program -----"); 
         
     }
 }

@@ -41,7 +41,7 @@
 //
 // 3. Tell the requester the sum/total (display)
 //
-class Program
+class 2Program
 {
     static void Main(string[] args)
     {
