@@ -55,7 +55,7 @@ namespace Day_2_Dictionary_Example
                 personInfo["Frank"] = 06082;    // Update its value
             }
 
-            Console.WriteLine("Kirk lives in: " + personInfo["Kirk"]);
+           Console.WriteLine("Kirk lives in: " + personInfo["Kirk"]);
 
             Console.Write("Whose zip code do you want? ");
             string name = Console.ReadLine();
