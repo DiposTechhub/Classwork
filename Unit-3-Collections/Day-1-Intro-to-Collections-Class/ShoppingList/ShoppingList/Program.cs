@@ -1,4 +1,5 @@
-﻿using System.Runtime.Serialization;
+﻿using System.Diagnostics.CodeAnalysis;
+using System.Runtime.Serialization;
 
 namespace ShoppingList;
 
@@ -14,17 +15,17 @@ internal class Program
         //   Name[key] =   value
 
         shoppingList["Hair Pick"] = 9.99;
-        shoppingList["Shoes"]     = 49.99;
-        shoppingList["Hat"]       = 19.26;
-        shoppingList["Towel"]     = 11.99;
-        shoppingList["Shorts"]    = 7.99;
-        shoppingList["Hoodie"]    = 52.99;
-        shoppingList["Blanket"]   = 10.99;
-        shoppingList["Candy"]     = 3.99;
-
-
+        shoppingList["Shoes"] = 49.99;
+        shoppingList["Hat"] = 19.26;
+        shoppingList["Towel"] = 11.99;
+        shoppingList["Shorts"] = 7.99;
+        shoppingList["Hoodie"] = 52.99;
+        shoppingList["Blanket"] = 10.99;
+        shoppingList["Candy"] = 3.99;
+        shoppingList["Available"] = 0.00;
+        
         shoppingList["Towel"] = 2.99;
-        shoppingList.Add("Booty", 45.99);
+        shoppingList.Add("PirateBooty", 45.99);
         //dictionaryName.Add( key, value)  throws and error/exception
         //ShoppingList.Add
 
@@ -39,14 +40,14 @@ internal class Program
 
         }
 
-        Console.WriteLine("Candy item is : " + shoppingList["Candy"]);
+        Console.WriteLine("Shoppinglist items are ready : " + shoppingList["Available"]);
 
         Console.WriteLine("Which list item would you like?");
         string name = Console.ReadLine();
 
         try
         {
-            Console.WriteLine(shoppingList + " Item is: " + shoppingList[name]);
+            Console.WriteLine(shoppingList + " is priced at: " + shoppingList[name]);
         }
         catch (KeyNotFoundException exceptionInfo)
         {
@@ -70,27 +71,31 @@ internal class Program
         Dictionary<string, double> shoppingList2 = new Dictionary<string, double>();
 
         for (int i = 0; i < 3; i++)
-        
-          
-        //Ask user for item name and price!
-        Console.WriteLine(" Enter shopping item: ");
+
+
+            //Ask user for item name and price!
+            Console.WriteLine(" Enter shopping item: ");
         string item = Console.ReadLine();
         Console.WriteLine("Enter Item Price");
         double price = double.Parse(Console.ReadLine());
-
-        shoppingList2[item] = price;    // shoppingList2.ADD(shoppingListnName, price)
         
-       //Using Keyvaluepair type to get an entry from Dictionary
-       foreach (KeyValuePair<string, double> anEntry in shoppingList2)
-       {
-           
-           Console.WriteLine(anEntry.Key + ": item is in list for " + anEntry.Value);
+
+        shoppingList2[item] = price; // shoppingList2.ADD(shoppingListnName, price)
+
+        //Using Keyvaluepair type to get an entry from Dictionary
+        foreach (KeyValuePair<string, double> anEntry in shoppingList2)
+        {
+
+
+    Console.WriteLine(anEntry.Key + ": item is in list for " + anEntry.Value);
        }
 
 
        Console.WriteLine("Please Press Enter to end program");
         Console.ReadLine();
+
     }
+
 }
 
 
