@@ -16,7 +16,14 @@ class Program
         Console.WriteLine("Would you like to continue? (y/n)");
         while (Console.ReadLine() != "y")
         {
-           Console.WriteLine("Would you like to continue? (y/n)");
+           Console.WriteLine("End of  Program!");
+            sentence = Console.ReadLine();
+                              
+            {
+                Console.WriteLine("End of Program");
+            }
+            
+            
         }
         
     }

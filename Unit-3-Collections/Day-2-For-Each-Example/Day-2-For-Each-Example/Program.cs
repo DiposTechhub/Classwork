@@ -45,7 +45,7 @@ class Program
 
         foreach (string aword in splitSentence)
         {
-            Console.WriteLine(aWord);
+            Console.WriteLine(aword);
         }
         // Display all then words using a do-while loop
         //

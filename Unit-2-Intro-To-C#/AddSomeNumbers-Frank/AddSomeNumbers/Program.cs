@@ -26,7 +26,7 @@ class Program
         
         // Define a place to hold the sum of the numbers
         int sum = 0;
-        
+       // int average = 0;
         // Loop through our process 3 times
         // If you know the number of times you want to loop
         //    Use a for-loop
@@ -56,14 +56,16 @@ class Program
 
             // Alternate way to get the number without using a string variable
             // Combine multiple statements into one
-            // firstEntry = int.Parse(Console.ReadLine());
+           // firstEntry = int.Parse(Console.ReadLine());
 
              // Add the number to the sum
-             sum = sum + firstEntry; // sum += firstEntry; works too
+            sum = sum + firstEntry; // sum += firstEntry; works too
+           // average = average + firstEntry;
+             // average += firstEntry;
         }
 
         // Display the sum of the numbers
-        Console.WriteLine("The sum of all your wonderful numbers is: " + sum);
+        Console.WriteLine("The average of all your numbers is: " + sum);
 
         Console.WriteLine("---- End  of Program -----"); 
         

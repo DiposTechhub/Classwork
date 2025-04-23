@@ -11,9 +11,8 @@ class Program
         // List <datatype> name = new List<datatype>();  //Don't forget the ()
         List<int> numbers = new List<int>();   //Empty list
        // int[] number= new int[4]; // numbers.length=5; 4 is the largest allowable index
-        
 
-        // Define a variable to hold the sum of the numbers
+     // Define a variable to hold the sum of the numbers
         int sum = 0;
 
         Console.WriteLine("--- Starting program ---");
@@ -31,7 +30,7 @@ class Program
         //  at 0      is not outside array   index for each loop
         // for (int i=0; i , numbers.Lenght;  i==)
         //Since our list starts of empty - we cant use .count to control our loop
-        for (int i=0; i < 7;  i++) // i = 0, 0,1,2 inside loop and 3 when exit loop
+        for (int i=0; i < 3;  i++) // i = 0, 0,1,2 inside loop and 3 when exit loop
         {
             Console.WriteLine("Please enter a number:  "); // Asking for the number 
             // numbers[i] = int.parse(console.Readline()))

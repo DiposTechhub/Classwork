@@ -103,7 +103,7 @@ namespace Day_2_Dictionary_Example
              
             // Display the entrys in our Dictionary
             // Use a KeyValuePair type to get an entry from teh Dictionary
-            foreach (KeyValuePair<string, listdouble>> anEntry in gradeBook)
+            foreach (KeyValuePair<string, listdouble>> anEntry  agradeBook)
             {
                 Console.WriteLine(anEntry.Key + " has a grade of " );
             }

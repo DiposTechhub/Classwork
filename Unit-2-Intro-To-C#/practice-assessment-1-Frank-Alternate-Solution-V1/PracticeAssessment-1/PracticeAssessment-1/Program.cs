@@ -9,18 +9,18 @@ class Program
         // To test/verify a method does what it should
         // We call it with various options
         // Call it and display what it returns
-        Console.WriteLine("Calling IsTheSame(5,5) expecting true, it returns: "  + IsTheSame(5, 5));
+       // Console.WriteLine("Calling IsTheSame(5,5) expecting true, it returns: "  + IsTheSame(5, 5));
         Console.WriteLine("Calling IsTheSame(4,5) expecting false, it returns: " + IsTheSame(4, 5));
         
         // Test whether Subtract can handle negative, positive and zero value results
         //      as well as numbers with decimal places
         
-        Console.WriteLine("Calling Subtract(4,5) expecting -1, it returns: " + Subtract(4, 5));
-        Console.WriteLine("Calling Subtract(5,4) expecting 1,  it returns: " + Subtract(5, 4));
-        Console.WriteLine("Calling Subtract(5,5) expecting 0,  it returns: " + Subtract(5, 5));
-        Console.WriteLine("Calling Subtract(4.1,1.3) expecting 2.8,  it returns: " + Subtract(4.1, 1.3));
-        Console.WriteLine("Calling Subtract(5,1.5) expecting 3.5,    it returns: " + Subtract(5, 1.5));
-        Console.WriteLine("Calling Subtract(1.5, 1) expecting .5,    it returns: " + Subtract(1.5, 1));
+     //   Console.WriteLine("Calling Subtract(4,5) expecting -1, it returns: " + Subtract(4, 5));
+      // Console.WriteLine("Calling Subtract(5,4) expecting 1,  it returns: " + Subtract(5, 4));
+        //Console.WriteLine("Calling Subtract(5,5) expecting 0,  it returns: " + Subtract(5, 5));
+        //Console.WriteLine("Calling Subtract(4.1,1.3) expecting 2.8,  it returns: " + Subtract(4.1, 1.3));
+        //Console.WriteLine("Calling Subtract(5,1.5) expecting 3.5,    it returns: " + Subtract(5, 1.5));
+       // Console.WriteLine("Calling Subtract(1.5, 1) expecting .5,    it returns: " + Subtract(1.5, 1));
         
         /* Test FindBuildingType using multiple values testing boundaries and between the boundaries
          
@@ -37,20 +37,20 @@ class Program
                   50 - min value                       
         */
         
-        Console.WriteLine("Calling FindBuildingType(3) expecting house, it returns: " + FindBuildingType(3));
-        Console.WriteLine("Calling FindBuildingType(1) expecting house, it returns: " + FindBuildingType(1));
-        Console.WriteLine("Calling FindBuildingType(2) expecting house, it returns: " + FindBuildingType(2));
+       // Console.WriteLine("Calling FindBuildingType(3) expecting house, it returns: " + FindBuildingType(3));
+     //   Console.WriteLine("Calling FindBuildingType(1) expecting house, it returns: " + FindBuildingType(1));
+     //   Console.WriteLine("Calling FindBuildingType(2) expecting house, it returns: " + FindBuildingType(2));
         
-        Console.WriteLine("Calling FindBuildingType(10) expecting office, it returns: " + FindBuildingType(10));
-        Console.WriteLine("Calling FindBuildingType(4) expecting office, it returns: " + FindBuildingType(4));
-        Console.WriteLine("Calling FindBuildingType(8) expecting office, it returns: " + FindBuildingType(4));
+      //  Console.WriteLine("Calling FindBuildingType(10) expecting office, it returns: " + FindBuildingType(10));
+      //  Console.WriteLine("Calling FindBuildingType(4) expecting office, it returns: " + FindBuildingType(4));
+       // Console.WriteLine("Calling FindBuildingType(8) expecting office, it returns: " + FindBuildingType(4));
         
-        Console.WriteLine("Calling FindBuildingType(11) expecting skyscraper, it returns: " + FindBuildingType(11));
-        Console.WriteLine("Calling FindBuildingType(49) expecting skyscraper, it returns: " + FindBuildingType(49));
-        Console.WriteLine("Calling FindBuildingType(32) expecting skyscraper, it returns: " + FindBuildingType(32));
+      //  Console.WriteLine("Calling FindBuildingType(11) expecting skyscraper, it returns: " + FindBuildingType(11));
+      //  Console.WriteLine("Calling FindBuildingType(49) expecting skyscraper, it returns: " + FindBuildingType(49));
+     //   Console.WriteLine("Calling FindBuildingType(32) expecting skyscraper, it returns: " + FindBuildingType(32));
         
-        Console.WriteLine("Calling FindBuildingType(50) expecting super, it returns: "  + FindBuildingType(50));
-        Console.WriteLine("Calling FindBuildingType(100) expecting super, it returns: " + FindBuildingType(100));
+      //  Console.WriteLine("Calling FindBuildingType(50) expecting super, it returns: "  + FindBuildingType(50));
+       //Console.WriteLine("Calling FindBuildingType(100) expecting super, it returns: " + FindBuildingType(100));
         
     }  // End of Main()
     // Any methods used by Main() are defined after Main() method and before the end of the class
@@ -66,16 +66,20 @@ class Program
     //     type name(what-it-accepts) - parameters: data-type name
     static bool IsTheSame(int num1, int num2)
     {
-        // If num1 is equal to num2, return true
-        //  if (num1 == num2) return true; // this works, but non-standard (non-professional)
-        if (num1 == num2)
-        {
-            // Industry standards expect the true processing to be inside { } 
+       //  If num1 is equal to num2, 
+     //    return true
+     if (num1 == num2)
+     {
+         return true; // this works, but non-standard (non-professional)
+     }
+     if (num1 == num2)
+       {
+            / Industry standards expect the true processing to be inside { }
             return true;
-        }
-        else  // If num1 is not equal to num2, return false.
+       }
+      else  // If num1 is not equal to num2, return false.
         { // Industry standards expect the false processing to be inside { } 
-            return false; 
+          return false; 
         }
         // return num1 == num2 // works too
     } // End of IsTheSame()

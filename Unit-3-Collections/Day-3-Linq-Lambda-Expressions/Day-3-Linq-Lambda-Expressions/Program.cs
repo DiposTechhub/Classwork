@@ -4,7 +4,10 @@ using System;                      // Give me access to C# System
 using System.Collections.Generic;  // Give me access to C# Collections stuff
 using System.Linq;                 // Give me access to the LINQ
 
-internal class Program
+
+//Removed the internal attribute, this program is the only one to use class
+class Program
+
 {
     // Data defined outside of any method (including Main())
     // Still inside the class Program
@@ -33,7 +36,7 @@ internal class Program
         {
             if (!moreInput())
             {
-                break;
+                break;   // Break out of loop based condition
             }
 
             Console.Write("\nEnter value to search for: ");
@@ -41,6 +44,7 @@ internal class Program
 
             // Search the List for matching elements based on user input
             //        using standard C# coding elements
+            //
             //
             //int matchCount = 0;
             //         name-of-curr-item in this-list
@@ -69,6 +73,11 @@ internal class Program
             //              from the List that made the condition true
             //
             // Note use of var type to hold the result of .Where()
+            // Put all the entries in StarfleetPersonnel that match the condition given 
+            //  into the variable called matching enetries
+            //  .Where() will add the current entry to matching entries if constoion is true
+            //  (.Where keeps an internal list of elelments that match the condition
+            //    and assigns it to the variable to the left of = when done)
 
             var matchingEntries =
                 starFleetPersonnel.Where(anEntry => anEntry.ToLower().Contains(searchString.ToLower()));
@@ -96,6 +105,11 @@ internal class Program
         //var theFirstOne = starFleetPersonnel.First(aLine => aLine.ToUpper().Contains(whatTheyWant.ToUpper()));
         var theFirstOne = starFleetPersonnel.FirstOrDefault(aLine => aLine.ToUpper().Contains(whatTheyWant.ToUpper()));
 
+        // Note use of string Interpolation to construt the string fro WriteLine
+        //  (Alternative to using + to make the string)
+        //  $" word {variable}" - the value in the variable replaces the {variable} in the string 
+        //  '\n' generates a new line in a string
+           //                                                                    if we found a match ? Use it       else use "None" 
         Console.WriteLine($"\nThe first occurence of {whatTheyWant} is in: " + ((theFirstOne != null) ? theFirstOne : "None"));
 
 
@@ -122,7 +136,7 @@ internal class Program
 
         WriteSeparatorLine("Sorting the List");
 
-        // Sort the List
+        // Sort the List -- since its a string there are no individual pieces to sort
         var sortList = starFleetPersonnel.OrderBy(aline => aline);
 
         foreach (string aLine in sortList)
@@ -219,7 +233,7 @@ internal class Program
 
         bool getInput = true;   // Control the user interaction loop
 
-        do
+        do  // variable controlled loop--- bool variable being set to determine if you can loop!
         {
             // Ask the user if they have any numbers to enter (Y/N)
             Console.WriteLine("\nDo you have any values to enter (Y/N)?");
@@ -231,18 +245,18 @@ internal class Program
 
             if (firstChar == "Y")
             {
-                getInput = false;
+                getInput = false;  // Set loop control variable to end the loop 
                 isThereInput = true;
             }
             else
             {
                 if (firstChar == "N")
                 {
-                    getInput = false;
+                    getInput = false;   // Set the loop control variable to end loop isThereInput = true;
                     isThereInput = false;
                 }
             }
-        } while (getInput); // Loop while we get input
+        } while (getInput); // Loop while we get input (based on loop controlled variable being true)
 
         return isThereInput;
 

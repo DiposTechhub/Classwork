@@ -50,11 +50,11 @@ class Program
           int yoda = 97;
           int obiWon = 420;
       //
-      Console.WriteLine("The sum of 4 and 5 is: " + mySum);
-      Console.WriteLine("The sum of 3 + 4and 5 is: " + Addem(3,4)); 
-      Console.WriteLine("The sum of yoda and obiWon is: " + Addem(yoda,obiWon));
+     // Console.WriteLine("The sum of 4 and 5 is: " + mySum);
+      //onsole.WriteLine("The sum of 3 + 4and 5 is: " + Addem(3,4)); 
+     // Console.WriteLine("The sum of yoda and obiWon is: " + Addem(yoda,obiWon));
       Console.WriteLine("The sum of 3 and 4 is: " + Addem(3.1, 4.5));
-      Console.WriteLine("The sum of 6.7 and 4.9 is: " + Addem(67, 4.9));
+     // Console.WriteLine("The sum of 6.7 and 4.9 is: " + Addem(67, 4.9));
       
       
 }   //  End of Main()
