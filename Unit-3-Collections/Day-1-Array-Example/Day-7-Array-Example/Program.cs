@@ -44,7 +44,7 @@ class Program
             // Set up a loop to get ARRAY_SIZE numbers, one at a time or responses indicating the user is done
             for (int i = 0; i < ARRAY_SIZE; i++)
             {
-                // if (mpreInput != true
+                // if (moreInput != true
                 if (!moreInput()) // if they don't have any more input...
                 {
                     break;  // exit the for-loop
@@ -90,7 +90,7 @@ class Program
          * Helper methods used by Main()
          ******************************************************************/
 
-        // return a boolean value to indicate if teh user has more input
+        // return a boolean value to indicate if the user has more input
         static bool moreInput()
         {
             bool   isThereInput  = false;  // Hold teh return value 
