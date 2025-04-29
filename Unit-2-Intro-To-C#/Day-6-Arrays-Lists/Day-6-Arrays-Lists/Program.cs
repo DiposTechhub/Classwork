@@ -10,7 +10,7 @@ class Program
         // Define an list to  that holds 3 numbers
         // List <datatype> name = new List<datatype>();  //Don't forget the ()
         List<int> numbers = new List<int>();   //Empty list
-       // int[] number= new int[4]; // numbers.length=5; 4 is the largest allowable index
+        int[] number= new int[2]; // numbers.length=5; 4 is the largest allowable index
 
      // Define a variable to hold the sum of the numbers
         int sum = 0;
@@ -30,17 +30,17 @@ class Program
         //  at 0      is not outside array   index for each loop
         // for (int i=0; i , numbers.Lenght;  i==)
         //Since our list starts of empty - we cant use .count to control our loop
-        for (int i=0; i < 3;  i++) // i = 0, 0,1,2 inside loop and 3 when exit loop
+        for (int i=0; i < 2;  i++) // i = 0, 0,1,2 inside loop and 3 when exit loop
         {
             Console.WriteLine("Please enter a number:  "); // Asking for the number 
-            // numbers[i] = int.parse(console.Readline()))
+          //  numbers[i] = int.parse(console.Readline());
             numbers.Add(int.Parse(Console.ReadLine()));    // get a string from keyboard
-      
+
         }                                                  // convert it toan int  
                                                            // store iti in numbers [i]
         // Verify the array recieved the numbers correctly
         //  GO through the array one element at a time and display the element
-        for (int i = 0; i < numbers.Count; i++)
+        for (int i = 0; i < number.Count; i++)
         {
             Console.WriteLine("Element# " + i + numbers[i]);  //Asking for the number
                  // get a string from keyboard

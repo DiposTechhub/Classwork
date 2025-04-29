@@ -42,10 +42,10 @@ class Program
     Student aStudent2 = new Student("Marquise", scores2);
     
     // Display the Student object we created
-    // Console.WriteLine() does not now how to display an object of our class
+    // Console.WriteLine() does not know how to display an object of our class
     Console.WriteLine("aStudent: " + aStudent);
     
-    // Use the Student class method to display Student class object
+    // Use the Student class method to display Student class (object)
     //
     // object.method() <--- object oriented notations
     aStudent.ShowStudent();

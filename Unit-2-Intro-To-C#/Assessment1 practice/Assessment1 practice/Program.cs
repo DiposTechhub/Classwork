@@ -9,18 +9,19 @@ class Program
 
     //Create a static method named IsPassing() that returnns a bool and takes in a grade (double) as a parameter
     static bool IsPassing(double grade)
-      
-        (grade >= 65)
-        
-        
+    {
+        if (grade > 65)
+    }
 
+    {
         return true;
     }
-    if (grade <= 65)
-            {
-                return false;
-            }
+     else 
+            (grade <= 65)
+        
+        
 
+        
             //Create a static method named AverageGrades() that takes in 3 parameters,all doubles
 
             static bool AverageGrade(double grade1, double grade2, double grade3)
@@ -40,7 +41,7 @@ class Program
             // int intgrade = Convert.ToInt32(grade);
            // int intgrade = (int)grade;
 
-            //bool isPassing = IsPassing(intgrade);
+           // bool isPassing = IsPassing(intgrade);
 
             if (grade = double)
             {
