@@ -1,17 +1,16 @@
-﻿namespace PracticeAssessment_1;
+﻿namespace RedoAssessment01;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Practice Assessment 1");
-        
+        Console.WriteLine("C# Assessment1");
         // To test/verify a method does what it should
         // We call it with various options
         // Call it and display what it returns
-      Console.WriteLine("Calling IsTheSame(5,5) expecting true, it returns: "  + IsTheSame(5, 5));
-       // Console.WriteLine("Calling IsTheSame(4,5) expecting false, it returns: " + IsTheSame(4, 5));
-        
+        Console.WriteLine("Calling IsTheSame(5,5) expecting true, it returns: "  + IsTheSame(5, 5));
+        // Console.WriteLine("Calling IsTheSame(4,5) expecting false, it returns: " + IsTheSame(4, 5));
+       
         // Test whether Subtract can handle negative, positive and zero value results
         //      as well as numbers with decimal places
         
@@ -63,69 +62,55 @@ class Program
     // method signature identifies the method name, what it returns and what it accepts
     //
     //     return
-    //     type name(what-it-accepts) - parameters: data-type name
-           static bool IsTheSame(int num1, int num2)
-    {
-       //  If num1 is equal to num2, 
-     //    return true
-     if (num1 == num2)
-     {
-         return true; // this works, but non-standard (non-professional)
-     }
-     if (num1 == num2)
-       {
-            // Industry standards expect the true processing to be inside { }
-            return true;
-       }
-      else  // If num1 is not equal to num2, return false.
-        { // Industry standards expect the false processing to be inside { } 
-          return false; 
-        }
-        // return num1 == num2 // works too
-    } // End of IsTheSame()
-    
-    // Create a static method named Subtract() that takes in 2 parameters, all doubles: num1, num2.
-    // (since all data is doubles, the return type should be double)
-    //  This method should return num1 minus num2.
-    // method parameters go inside ()
-    static double Subtract(double num1, double num2)
-    {
-        return num1 - num2;  // (num1 - num2)  - parentheses optional 
-    } // End of Subtract()
+    //     type name(what-it-accepts) - parameters: data-type name 
 
-    
-    /* Create a static method named FindBuildingType() takes in a number (int) as a parameter.
-       (The following ranges are inclusive)
+        static bool IsThesame(double num)
+        {
+            if (num >= 65)
+            {
+                return true;
+            }
+            else if (num <= 65)
+            {
+                return false;
+            }
        
-       If the number is 3 or less, return "This is a house!"
-       If the number is between 4 and 10, return "This is an office building!"
-       If the number is between 11 and 49, return "This is a skyscraper!"
-       If the number is 50 or more, return "This is a SUPER skyscraper!" 
-    */
-    static string FindBuildingType(int num1)
-    {
-        if (num1 <= 1)
-        {
-            return "This is a house";
-        }
-        else if (num1 >=4 && num1 <= 10)
-        {
-            return "This is an office building!";
-        }
-        else if (num1 >=11 && num1 <= 49)
-        {
-            return "This is a skyscraper!";
-        }
 
-        // We KNOW if we get here the number has to be 50 or greater 
-        // We've handled all other situations alread
-        return "This is a SUPER skyscraper!";
+
+
         
-        // This return is required because C# doesn't know that we've handled all possible situations
-        // so it wants a return in case we haven't
-        //
-        // to avoid this, remove the last else if
-        //return "I don't know";
-    }
+        }
+ //End of IsPassing
+
+   //Create a static method named AverageGrades() that takes in 3 parameter, all double
+   // grade1, grade2, grade3.
+   // a This method should return the average of all grades.
+     
+   //  static double AverageGrades(int num1, int num2, int num3)
+     
+     //    List<double> AverageGrades = new List<double>(int num1, int num2, int num3);
+
+       //  listofGrades = grade.Tolist();
+         //listofGrades.Reverse;
+     
+}
+
+
+
+
+
+
+     // static string OddOrEvenAndPassing(double num1)
+      // convert the grade to an int and run it through the following conditions
+      // Note: You need to reuse the IsPassing() method here.
+      //  If the grade is passing and odd return "passing and odd".
+      //If the grade is failing and odd return "failing and odd".
+     // If the grade is passing and even return "passing and even".
+     //   If the grade is failing and even return "failing and even".
+
+
+
+
     
-} // End of class Program
+
+
