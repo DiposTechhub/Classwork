@@ -33,7 +33,7 @@ namespace Day_2_Playing_Card_Example
                                                       // aCard is aPlayingCard type not a string
                                                       // In order for it to written it needs to be converted to a string
                                                       // The default ToString() method to convert an Object to a string generates
-                                                      //             a string containing the "namespace.className"
+                                                      //      a string containing the "namespace.className"
                                                       // If you want your class object to be represented as string
                                                       //    YOU must override the default ToString() method in your class
                                                       // i.e. YOU decide what a string representation of your class looks like

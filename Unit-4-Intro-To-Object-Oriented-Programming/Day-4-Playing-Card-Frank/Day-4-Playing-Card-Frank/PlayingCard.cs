@@ -70,9 +70,9 @@
 
         public PlayingCard(PlayingCard sourceCard)
         {
-            cardColor = sourceCard.cardColor;
-            cardSuit  = sourceCard.cardSuit;
-            cardValue = sourceCard.cardValue;
+            cardColor = sourceCard.cardColor;      //asssign the source from value to the new value
+            cardSuit  = sourceCard.cardSuit;       //assign the source suit value to the new value
+            cardValue = sourceCard.cardValue;      //assign the source value to the new value
         }
 
 
