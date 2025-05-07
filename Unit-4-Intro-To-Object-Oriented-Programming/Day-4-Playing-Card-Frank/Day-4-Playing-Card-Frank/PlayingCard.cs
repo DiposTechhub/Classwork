@@ -36,13 +36,23 @@
         // A property is typically name the same as the variable in PascalCase
 
         // Define properties for access to data members
-        public int CardValue  // name is the data member in Pascal
+        public int CardValue  // name is the data member in PascalCase
         {
             get { return cardValue; }   // getter - return the value in cardValue
             set { cardValue = value;}   // setter - set cardValue to value used when assigning
                                         //          value is keyword representing the value assigned        
         }
-
+        public string CardSuit  // Property for Suit
+        {
+            get { return cardSuit; }
+            set { cardSuit = value; }
+        }
+        public string CardColor  // Property for Color
+        {
+            get { return cardColor;}
+            set { cardColor = value; }
+        }  
+        
         /*********************************************************************
          * Method members (functions that operate on the class data)
          *********************************************************************/
@@ -70,9 +80,15 @@
 
         public PlayingCard(PlayingCard sourceCard)
         {
+<<<<<<< HEAD
             cardColor = sourceCard.cardColor;      //asssign the source from value to the new value
             cardSuit  = sourceCard.cardSuit;       //assign the source suit value to the new value
             cardValue = sourceCard.cardValue;      //assign the source value to the new value
+=======
+            cardColor = sourceCard.cardColor;  // Assign the source value to the new value
+            cardSuit  = sourceCard.cardSuit;   // Assign the source suit value to the new value
+            cardValue = sourceCard.cardValue;  // Assign the source value to the new value
+>>>>>>> f3635214f6c8fea025a2208c7eb3f1b43615cd75
         }
 
 
