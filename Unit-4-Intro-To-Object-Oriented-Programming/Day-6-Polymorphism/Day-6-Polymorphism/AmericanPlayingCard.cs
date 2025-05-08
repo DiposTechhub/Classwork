@@ -1,10 +1,9 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 
-namespace Day_3_Inheritance
+namespace Day_6_Polymorphism
 {
-    // This will be a subclass of a PlayingCard
+    // This is a subclass of a PlayingCard
     // and will add what an AmericanPlaying needs that differs from a PlayingCard:
 
     //     Card values: 0 to 13 (Joker to King)
@@ -15,43 +14,27 @@ namespace Day_3_Inheritance
     public class AmericanPlayingCard : PlayingCard  // Indicate PlayingCard is our base class
     {
         // We get access to all the data and methods in the base class PlayingCard
-        // (So we dont need to define them again)
+
         /*************************************************************************************
          * Additional data required by the subclass
          ************************************************************************************/
-        //Constant are used to facilitate coding and understanding 
-        // (c# coding convention: CONSTANT_NAMES _ ALL uppercase;  words seperated by underscores)
-        // con st indicated this data item is a constant - cannot be changed once assigned a value 
         private const int    DEFAULT_CARD_VALUE = 0;
         private const string DEFAULT_COLOR      = "Black";
         private const string DEFAULT_SUIT       = "Joker";
         private const int    MAX_CARD_VALUE     = 13;   // King
         private const int    MIN_CARD_VALUE     = 0;    // Joker
-       
-        // Dictionary will associate suits ad colors
+
         private Dictionary<string, string> suitsColors = new Dictionary<string, string>();
-         
-        //So we can use names for the card values - indexesd are the card values
-        //
+
         private string[] cardValueName =//   0       1       2       3       4        5       6       7
                                         { "Joker", "Ace" , "Two", "Three", "Four" , "Five", "Six", "Seven",
                                           "Eight", "Nine", "Ten", "Jack" , "Queen", "King"
                                         //   8        9      10     11        12      13
                                         };
-          
-        
-        // A subcalss constructior must a super class construtor 
-        // To ensure the super class data is intialized 
-        //
-        //base() reresents a base class constructor
-        
-        //
-        // Default Constructor for an AmericanPlayingCard  - intialize default card
+
+        // Default Constructor for an AmericanPlayingCard
         //     it must call the base() to initialize the base class
-        // The super class only has three argument constructor, so we have to call it to intialize
-        // the super class data
-        
-        //  this class-ctor          : super-class ctor
+
         public AmericanPlayingCard() : base(DEFAULT_CARD_VALUE, DEFAULT_SUIT, DEFAULT_COLOR) {}
 
         // 2-arg Constructor for an AmericanPlayingCard
@@ -126,7 +109,7 @@ namespace Day_3_Inheritance
          * Overrides - Replace unwanted behavior of base class with behaviors for the subclass
          ***************************************************************************************/
 
-        // No Overrides requires as base class processing does what we want it to do
+        // No Overrides required as base class processing does what we want it to do
 
         /****************************************************************************************
          * User Methods for class - Allow user to use and manipulate the class
@@ -138,7 +121,7 @@ namespace Day_3_Inheritance
         }
 
         // Display an object of the class
-        public void ShowCard()
+        public override void ShowCard()
         {
             Console.WriteLine($"AmericanPlayingCard: Value: {GetCardValueName()} ({base.CardValue}), Suit: {base.CardSuit}, Color: {base.CardColor}");
         }

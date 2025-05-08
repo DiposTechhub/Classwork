@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Day_3_Inheritance
+namespace Day_5_Inheritance_Example
 {
     // This is class to represent a simple PlayingCard
     // It's in the same namespace as the application (for now and for simplicity)
@@ -54,7 +54,6 @@ namespace Day_3_Inheritance
             {
                 cardSuit = value; // value is keyword representing the value assigned 
             }
-
         }
 
         public string CardColor // name is the data member in PascalCase
@@ -62,7 +61,6 @@ namespace Day_3_Inheritance
             get { return cardColor; } // getter - return the value in cardValue
 
             set { cardColor = value; }// value is keyword representing the value assigned 
-
         }
         /*********************************************************************
          * Method members (functions that operate on the class data)
@@ -74,7 +72,7 @@ namespace Day_3_Inheritance
         //
         // Constructors:   public, same name as class, no return type, may have parameters
 
-        // Constructor to initialize all instance variables
+        // Constructor to initialize all instance variables aka 3-arg ctor
         public PlayingCard(int theValue, string theSuit, string theColor)
         {
             cardValue = theValue; // initialize value to value passed 
@@ -121,6 +119,9 @@ namespace Day_3_Inheritance
          **************************************************************************************/
 
         // Override the default ToString() method
+        
+        // Default ToString() returns namespace.className
+        
         // We MUST be sure the method signature matches the method we are overriding
         // An override is substituting your processing for the default processing
 
@@ -144,6 +145,7 @@ namespace Day_3_Inheritance
         }
 
         // Equals returns true to data members of two objects are equal
+<<<<<<< HEAD:Unit-4-Intro-To-Object-Oriented-Programming/Day-5-Inheritaance-Example/Day-5-Inheritaance-Example/PlayingCard.cs
         //default Equals() only comares the contenet  of the reference variable (locations)
         //If you want ti comare the contents of the objects - Create an Ewulas() overide
         //
@@ -153,24 +155,42 @@ namespace Day_3_Inheritance
         //
         //myCard.Equal(yourCard) --> this represent myCard and other object represent your card
         public override bool Equals(object otherObject)
+=======
+        // Default Equals() only compares the contents of the refernce varaiable (locations)
+        // If you want to compare the contents of the objects - Create an Equals() override
+        //
+        // the keyword this represents the object used to invoke the method
+        //
+        //        In the class method:    this represents the object to the left of the dot
+        //  To execute a class method:    object.method(parameters)
+        //
+        //  myCard.Equals(yourCard) --> this represenst myCard and otherObject reprsents yourCard
+        public override bool Equals(object otherObject) // Note the parameter is a generic object type
+>>>>>>> c3585a4661c686c768ed96d9f29666c9a16c71f6:Unit-4-Intro-To-Object-Oriented-Programming/Day-5-Inheritance-Example-V1-Frank/Day-5-Inheritance-Example/PlayingCard.cs
         {
             if (otherObject.GetType() != this.GetType())  // If types differ...
             {
                 return false;                             //     they can't be equal
             }
+<<<<<<< HEAD:Unit-4-Intro-To-Object-Oriented-Programming/Day-5-Inheritaance-Example/Day-5-Inheritaance-Example/PlayingCard.cs
 
             if (otherObject == this)                      // if the same object.(same reference/location)..
+=======
+            
+            if (otherObject == this)                      // if the same object (same reference/location)...
+>>>>>>> c3585a4661c686c768ed96d9f29666c9a16c71f6:Unit-4-Intro-To-Object-Oriented-Programming/Day-5-Inheritance-Example-V1-Frank/Day-5-Inheritance-Example/PlayingCard.cs
             {
                 return true;                              //    they must be equal
             }
 
             // Create a PlayingCard reference to generic object passed to method
             // so we can access the objects data members
-            PlayingCard otherCard = (PlayingCard) otherObject;
+            // (otherObject is defined as a generic Object - it must be a real Object to process)
+            PlayingCard otherCard = (PlayingCard) otherObject;  // Cast the generic to an object and store it
 
-            if (otherCard.cardValue == this.cardValue     // if all data
-                && otherCard.cardSuit == this.cardSuit    //    members are equal
-                && otherCard.cardColor == this.cardColor) //      between the objects...
+            if (otherCard.cardValue    == this.cardValue   // if all data
+                && otherCard.cardSuit  == this.cardSuit    //    members are equal
+                && otherCard.cardColor == this.cardColor)  //      between the objects...
             {
                 return true;                              // they are equal   
             }
