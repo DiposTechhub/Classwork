@@ -144,6 +144,14 @@ namespace Day_3_Inheritance
         }
 
         // Equals returns true to data members of two objects are equal
+        //default Equals() only comares the contenet  of the reference variable (locations)
+        //If you want ti comare the contents of the objects - Create an Ewulas() overide
+        //
+        //the keyword this reresents the object used to inovke the method
+        //       In the class method:   this represents the objewt to the left of the dot
+        // To execute a class method:   object.method(parameters)
+        //
+        //myCard.Equal(yourCard) --> this represent myCard and other object represent your card
         public override bool Equals(object otherObject)
         {
             if (otherObject.GetType() != this.GetType())  // If types differ...
@@ -151,7 +159,7 @@ namespace Day_3_Inheritance
                 return false;                             //     they can't be equal
             }
 
-            if (otherObject == this)                      // if the same object...
+            if (otherObject == this)                      // if the same object.(same reference/location)..
             {
                 return true;                              //    they must be equal
             }

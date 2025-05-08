@@ -69,7 +69,11 @@ namespace Day_3_Inheritance
             //      (or the generic Object ToString() if base class doesn't have one)
 
             Console.WriteLine($"theCard: {theCard}");
-
+           
+            myFuncs.WriteSeparatorLine("Inheritance stuff starts here...");
+            
+            
+            // Inheritance related code starts here
             AmericanPlayingCard theCard2 = new AmericanPlayingCard(10, "Spades");
 
             // This will use the PlayingCard .Equals() method
@@ -104,17 +108,27 @@ namespace Day_3_Inheritance
 
             myFuncs.WriteSeparatorLine("Display AmericanPlayingCard using base class ToString()");
 
-            Console.WriteLine(usaCard1);
+            Console.WriteLine(usaCard1); // Writeline will look for a string() method to get a string
+                                         // representation of the class
+                                         // usaCard 
+                                         // The americanPlayingCard class does not have a ToString() method
+                                         // SO it looks to the super class of AmericanlayingCard to see if it has one
+                                         //PlayingCard does have a ToString() method, so WriteLine uses it.
+            
             Console.WriteLine(usaCard2);
 
             myFuncs.WriteSeparatorLine("Compare two AmericanPlayingCards");
 
             Console.Write($"1st card: {usaCard1.CardValue} ({usaCard1.GetCardValueName()}) of {usaCard1.CardSuit}");
-            
+                
             Console.Write($"{(usaCard1.Equals(usaCard2) ? " is EQUAL" : " is NOT equal")} to");
 
             Console.Write($" 2nd card: {usaCard2.CardValue} ({usaCard2.GetCardValueName()}) of {usaCard2.CardSuit}\n");
-
+            
+            myFuncs.WriteSeparatorLine("Italian Card stuff Follows");
+            
+            //define an 2 of coins which 
+            
             myFuncs.PauseProgram();
             
 
