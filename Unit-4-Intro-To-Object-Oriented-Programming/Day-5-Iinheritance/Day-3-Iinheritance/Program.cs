@@ -15,7 +15,7 @@ namespace Day_3_Inheritance
 
         static void Main(string[] args)
         {
-            myFuncs.WriteSeparatorLine("Welcome to our first Inheritnce Example");
+            myFuncs.WriteSeparatorLine("Welcome to our first Inheritance Example");
 
             /*************************************************************************
              * Define/Instantiate a PlayingCard - an Ace of Hearts which is red
